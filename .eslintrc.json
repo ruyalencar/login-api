@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "standard-with-typescript",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
+    },
+    "rules": {
+      "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+			"@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-extraneous-class": "off",
+			"@typescript-eslint/return-await": "off",
+			"@typescript-eslint/naming-convention": [
+	      "error",
+	      {
+	        "selector": "interface",
+	        "format": ["PascalCase"],
+	        "custom": {
+	          "regex": "^I[A-Z]",
+	          "match": true
+	        }
+	      }
+	    ],
+			"@typescript-eslint/semi": "off",
+			"no-useless-constructor": "off",
+			"@typescript-eslint/member-delimiter-style": ["error", {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets"
+      }],
+      "semi": [2, "always"]
+    }
+}
